@@ -1,0 +1,152 @@
+ ],
+      "metadata": {
+        "id": "-LxGAw-XvT_x"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "p = int(input(\"Digite a posição da porta (0 ou 1):\"))\n",
+        "r = int(input(\"Digite a posição da porta (0 ou 1):\"))\n",
+        "\n",
+        "if p==0 and r==0:\n",
+        "  print(\"C\")\n",
+        "elif p==0 and r==1:\n",
+        "    print(\"C\")\n",
+        "elif p==1 and r==1:\n",
+        "  print(\"A\")\n",
+        "else:\n",
+        "  print(\"B\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "5Iw3f45Sy3qM",
+        "outputId": "9fe38478-3165-4f0c-a590-e384848e7873"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite a posição da porta (0 ou 1):1\n",
+            "Digite a posição da porta (0 ou 1):0\n",
+            "B\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### Desafio\n",
+        "\n",
+        "Agora, imagine que o jogo de flíper ficou mais complexo e há 3 portinhas que podem influenciar o caminho da bolinha.\n",
+        "\n",
+        "As portinhas funcionam da seguinte forma:\n",
+        "\n",
+        "* A portinha P decide entre os caminhos iniciais.\n",
+        "* A portinha R ajusta o trajeto no meio.\n",
+        "* Uma nova portinha Q foi adicionada. Ela define se o caminho final incluirá uma letra extra, D, quando estiver na posição 1.\n",
+        "\n",
+        "Atualize o programa para incluir a lógica da terceira portinha:\n",
+        "\n",
+        "Se a portinha Q estiver na posição 1, deve ser exibida a letra D.\n",
+        "No final do programa, continue imprimindo o caminho completo como antes."
+      ],
+      "metadata": {
+        "id": "x3VImxWm0jdh"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Aula 6\n",
+        "\n",
+        "**Problema:** https://olimpiada.ic.unicamp.br/pratique/pj/2019/f1/idade/\n",
+        "\n",
+        "Dona Mônica é mãe de três filhos com idades diferentes. Este ano, a soma das idades de seus três filhos é igual à idade dela.\n",
+        "\n",
+        "Você deve escrever um programa que, dada a idade de Dona Mônica e as idades conhecidas de dois de seus filhos, determine a idade do terceiro filho e identifique quem é o mais velho.\n",
+        "\n",
+        "**Entrada**\n",
+        "\n",
+        "* Um número inteiro `idade_monica` representando a idade de Dona Mônica.\n",
+        "* Um número inteiro `idade_filho1` representando a idade de um dos filhos.\n",
+        "* Um número inteiro `idade_filho2` representando a idade de outro filho."
+      ],
+      "metadata": {
+        "id": "Fm4esSgd1U0a"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def calcula_idade_maior(idade_monica, idade_filho1, idade_filho2):\n",
+        "  idade_filho3 = idade_monica - idade_filho1 - idade_filho2\n",
+        "\n",
+        "  idade_maxima = max(idade_filho1, idade_filho2, idade_filho3)\n",
+        "\n",
+        "  return idade_filho3, idade_maxima\n",
+        "\n",
+        "calcula_idade_maior(68, 12, 30)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "EBIUtz6T5ftK",
+        "outputId": "cff9aeaf-2884-487b-85b7-77392211c754"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "(26, 30)"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 24
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### Desafio\n",
+        "\n",
+        "Agora imagine que nós queremos descobrir qual livro da biblioteca tem a maior quantidade de páginas.\n",
+        "\n",
+        "Para isso nós começamos com os 5 maiores livros que pegamos da biblioteca da escola.\n",
+        "\n",
+        "O nosso programa vai precisar receber 5 números inteiros que representa a quantidade de páginas e imprimir um único número representando o maior número de páginas entre ele.\n",
+        "\n",
+        "Para isso, vocês precisam escrever um código usando uma função def que vocês vão nomear da forma que vocês acharem mais correta."
+      ],
+      "metadata": {
+        "id": "YqQG1RnV7hQA"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Aula 8\n",
+        "\n",
+        "Nós resolvemos muitos problemas nessa unidade. Para resolver esse problema nós seguimos diversos caminhos, mas o essencial que precisamos considerar na hora de resolver problemas é:\n",
+        "\n",
+        "1. Ler o problema com calma e atenção e entender o que ele está pedindo de fato\n",
+        "2. Identificar os dados fornecido\n",
+        "3. Identificar o que precisa ser descoberto\n",
+        "4. Planejar a solução (vou precisar de variáveis? funções? quais parametros, quais calculos são realizados, quais as entradas, quais as saídas)\n",
+        "5. Resolver o problema"
+      ],
+      "metadata": {
+        "id": "kqpSkfmT8N8N"
+      }
+    }
+  ]
+}
